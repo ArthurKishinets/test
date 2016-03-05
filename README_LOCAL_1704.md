@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Стартовые шаблоны для адаптивной верстки сайтов</h1>
 
 Автор сборки: <a href="webdesign-master.ru" target="_blank">http://webdesign-master.ru</a>
@@ -47,6 +46,3 @@
 		</ul>
 	</li>
 </ul>
-=======
-# test
->>>>>>> c139a2cec8c59ab2e93cd0029f3a4b7e751f358b
