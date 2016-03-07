@@ -1,29 +1,26 @@
 $(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
+	var $slider = $('.container .slider');
+	var $container = $('.container');
+	var $slides = $container.find('.slide');
+	var $currentSlide = 1;
+	
+	var start = setInterval(function() {
+		$slider.animate({'margin-left':'-=100%'}, 1000,
+		function() {
+			
+			if(++$currentSlide === $slides.length) {
+				$currentSlide = 1;
+				$slider.css('margin-left', 0);
+				
+				
+			}
 		});
-	};
+		
+	}, 3000);
+		
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+
 
 	//Chrome Smooth Scroll
 	try {
