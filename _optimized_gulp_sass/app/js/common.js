@@ -5,12 +5,17 @@ $(function() {
 	var $slides = $container.find('.slide');
 	var $currentSlide = 1, interval;
 	var $right = $('.right'), $left = $('.left');
-	
+	$(".slide" + ($currentSlide - 1)  + " .round img:nth-child(1)").attr('src', 'img/favicon/hard.png');
+
 	function start() {
+
 		interval = setInterval(function() {
 			$slider.animate({'margin-left':'-=100%'}, 1000,
 			function() {
 				$currentSlide++;
+				//alert($currentSlide);
+				console.log(".slide" + ($currentSlide - 1)  + " .round li:nth-child(" + ($currentSlide - 1) + ")");
+				$(".slide" + ($currentSlide - 1)  + " .round img:nth-child(" + ($currentSlide) + ")").attr('src', 'img/favicon/hard.png');
 				if($currentSlide === $slides.length) {
 					$currentSlide = 1;
 					$slider.css('margin-left', 0);
@@ -18,7 +23,7 @@ $(function() {
 				
 			});
 			
-		}, 4000);
+		}, 5000);
 	}	
 
 	function stop(){
