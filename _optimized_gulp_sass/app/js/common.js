@@ -9,14 +9,14 @@ $(function() {
 	var duration = 1000, tim;
 	$(".slide" + ($currentSlide - 1)  + " .round img:nth-child(1)").attr('src', 'img/favicon/hard.png');
 
+// slider starts working
 	function start() {
-		
-		console.log('start');
 			clearInterval(interval);	
 			interval = setInterval(function() {
 				$slider.animate({'margin-left':'-=100%'}, 1000,
 				function() {
 					$currentSlide++;
+					// find necessary circus and make it black by changing src
 					$(".slide" + ($currentSlide - 1)  + " .round img:nth-child(" + ($currentSlide) + ")").attr('src', 'img/favicon/hard.png');
 					if($currentSlide === $slides.length) {
 						$currentSlide = 1;
@@ -26,17 +26,18 @@ $(function() {
 			}, 5000);
 	}	
 
+// slider stops working
 	function stop(){
 		clearInterval(interval);
 	}
-
+// slider goes to the next slide
 	function next(time) {
 		stop();
-
 		console.log('tim is ' + tim);
 		$slider.animate({'margin-left': '-=100%'}, {tim, complete:
 			function(){
 				$currentSlide++;
+				// paint circus
 				$(".slide" + ($currentSlide - 1)  + " .round img:nth-child(" + ($currentSlide) + ")").attr('src', 'img/favicon/hard.png');
 				tim = undefined;
 				if($currentSlide === $slides.length) {
@@ -46,11 +47,10 @@ $(function() {
 			}
 		});
 	}
-
+// slider returns to the previoous slide
 	function previous(time) {
-		
 		if($currentSlide !== 1){
-			tim = typeof time !== undefined ?  time : duration;
+			// paint circus
 			$(".slide" + ($currentSlide - 1)  + " .round img:nth-child(" + ($currentSlide) + ")").attr('src', 'img/favicon/hard.png');
 				$slider.animate({'margin-left': '+=100%'}, {tim, complete:
 				function(){
@@ -59,7 +59,7 @@ $(function() {
 			});
 		}
 	}
-
+// when circus has been click slider goes to the specefied slide
 	$('.round img[src="img/favicon/light.png"]').click(function() {
    		var numb = this.className.charAt(5);
    		var count = numb - $currentSlide;
