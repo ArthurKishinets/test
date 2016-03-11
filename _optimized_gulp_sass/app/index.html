@@ -13,12 +13,13 @@
 
 	<meta property="og:image" content="path/to/image.jpg">
 
-	<link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	
 
+
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<script src="js/modernizr.custom.63321.js"></script>
 	
 
 	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
@@ -32,8 +33,6 @@
 	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
 	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
 	<!-- Load CSS End -->
-
-	<!--<link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.css">-->
 
 	<!-- Load CSS Compiled without JS -->
 	<noscript>
@@ -60,7 +59,7 @@
 
 	<div style="clear:both"></div>
 	
-	<div class="icontainer">
+	<div class="container">
 		<ul class="slider">
 		 	<li class="slide slide0" id="">
 		 		<img src="img/favicon/left.png" class="left">
@@ -164,31 +163,66 @@
 	<div class="text content">
 		<img src="img/cookie.jpg">
 		<h1>Something about you</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint   laborum.</p>
 	</div>
 	<div class="my_form">
 		<div class="form_fields">
 			<h1>Register</h1>
-			<div class="form-group">
-    			
-    			<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
- 			</div>
-			<div class="form-group">
-    			
-    			<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-  			</div>
-  			<select class="form-control">
- 				<option selected>Country</option>
-  				<option>Country1</option>
-  				<option>Country2</option>
-  				<option>Country3</option>
-			</select>
-			</form>
+			<div class="actform">
+				<form method="POST">
+				<section class="content">
+					<span class="input input--minoru">
+						<input class="input__field input__field--minoru" type="text" id="input-13" />
+						<label class="input__label input__label--minoru" for="input-13">
+							<span class="input__label-content input__label-content--minoru">Name</span>
+						</label>
+					</span>
+					<span class="input input--minoru">
+						<input class="input__field input__field--minoru" type="password" id="input-14" />
+						<label class="input__label input__label--minoru" for="input-14">
+							<span class="input__label-content input__label-content--minoru">Password</span>
+						</label>
+					</span>
+					
+				</section>
+      			<section class="main clearfix">
+					<div class="fleft">
+						<select id="cd-dropdown" class="cd-select">
+							<option value="-1" selected>Choose country</option>
+							<option value="1" >Country1</option>
+							<option value="2" >Country2</option>
+							<option value="3" >Country3</option>
+							
+						</select>
+					</div>
+				</section>
+				<input id="bigbutton" class="fsSubmitButton" type="submit" value="Send" />
+
+		  			
+				</form>
+			</div>
 		</div>
 	</div>	
 	<footer>
 		<h3>2015 @Layout</h3>
 	</footer>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+		<script type="text/javascript">
+			
+			$( function() {
+				
+				$( '#cd-dropdown' ).dropdown( {
+					gutter : 5,
+					delay : 100,
+					random : true
+				} );
+
+			});
+
+		</script>
+
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
