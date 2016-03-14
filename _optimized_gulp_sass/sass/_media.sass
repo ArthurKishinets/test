@@ -8,13 +8,48 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 992px) 
+	.content
+		ul 
+			margin-left: 0 
+	.container
+		.slider
+			.slide h2
+				font-size: 38px
+			.slide .go
+				margin: 7% 0 0 20%
+				color: white
+			img[src="img/favicon/right.png"]
+				margin-left: /*80px*/ 22%
+			.round
+				top: 35%
+				left: 47%
+	.content
+		width: 90%
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+	.container
+		.slider
+			.slide h2
+				font-size: 30px
+			img[src="img/favicon/left.png"]
+				margin: /*180px 0 0 200px*/ 12% 0 0 5%
+			img[src="img/favicon/right.png"]
+				margin-left: /*80px*/ 23%
+			.slide .go
+				margin: 12% 0 0 28%
+			.round
+				top: 35%
+				left: 45%
+	.text
+		font-size: 14px
+	.content
+		width: 95%
+		img[src="img/cookie.jpg"]
+			float: left
+			padding: 30px 25px 0 0
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -38,15 +73,67 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
-
-
+@media only screen and (max-width : 590px)
+	.container
+		.slider
+			.slide h2
+				font-size: 30px
+			img[src="img/favicon/left.png"]
+				display: none
+			img[src="img/favicon/right.png"]
+				display: none
+			.slide .go
+				margin: 20% 0 0 30%
+			.round
+				top: 30%
+				left: 40%
+	.content
+		img[src="img/cookie.jpg"]
+			float: left
+	.my_form
+		.form_fields
+			width: 425px
+			height: 550px
+			padding: 35px 0 0 0
+			.actform
+				margin: 20px auto
+				width: 350px
+				section.main 
+					margin-left: -80px
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
 
-
+@media only screen and (max-width : 455px)
+	.container
+		.slider
+			.slide h2
+				font-size: 30px
+			img[src="img/favicon/left.png"]
+				display: none
+			img[src="img/favicon/right.png"]
+				display: none
+			.slide .go
+				margin: 18% 0 0 15%
+			.round
+				top: 35%
+				left: 30%
+	.my_form
+		.form_fields
+			width: 300px
+			height: 550px
+			padding: 35px 0 0 0
+			.actform
+				margin: 20px auto
+				width: 250px
+				section.main 
+					margin-left: -80px
+				#bigbutton
+					margin-left: 50px	
+	.content
+		img[src="img/cookie.jpg"]
+			float: left
+			width: 100%
+	.text
+		width: 90%
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
