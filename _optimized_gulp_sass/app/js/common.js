@@ -81,6 +81,27 @@ $(function() {
 
 	start();
 
+	//menu
+
+	$('img[src="img/menuj.jpg"]').click(function() {
+		$('img[src="img/menuj.jpg"]').fadeOut();
+		$('.navmenu').fadeIn(700);
+		$(document).scroll(function() {return false;});
+		$('html, body').css({
+    		'overflow': 'hidden',
+    		'height': '100%'
+		});
+
+		$('img[src="img/close.png"]').click(function() {
+			$('.navmenu').fadeOut(700);
+			$('img[src="img/menuj.jpg"]').fadeIn();
+			$('html, body').css({
+			    'overflow': 'auto',
+			    'height': 'auto'
+			});
+		});
+	});
+
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
